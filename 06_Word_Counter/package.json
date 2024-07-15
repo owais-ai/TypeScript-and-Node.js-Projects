@@ -1,0 +1,19 @@
+{
+  "name": "word-counter-program",
+  "version": "1.0.4",
+  "description": "The user will enter a paragraph and program will count the words and characters without whitespaces.",
+  "main": "app.js",
+  "type": "module",
+  "bin": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Owais",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}

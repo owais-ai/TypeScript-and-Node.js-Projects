@@ -1,0 +1,19 @@
+{
+  "name": "todo-ai-app",
+  "version": "1.0.1",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "bin": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "owais",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.3.5"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}

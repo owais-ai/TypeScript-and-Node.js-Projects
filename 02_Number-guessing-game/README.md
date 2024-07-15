@@ -1,2 +1,3 @@
 # cli-number-guessing
-This is a cli based number guessing game
+This is a cli based number guessing game build with TypeScript and Node.js
+

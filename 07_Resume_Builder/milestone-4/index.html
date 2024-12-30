@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- Form Section -->
+    <div id="form-section">
+      <h2>Create Your Resume</h2>
+      <form id="resume-form">
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name<span class="required">*</span>:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email<span class="required">*</span>:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone<span class="required">*</span>:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="profilePicture">Profile Picture:</label>
+          <input type="file" id="profilePicture" name="profilePicture" accept="image/*" />
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+          <legend>Education</legend>
+          <div id="education-container">
+            <div class="education-entry">
+              <input type="text" name="degree" placeholder="Degree (e.g., Bachelor in Computer Science)" required />
+              <input type="text" name="institution" placeholder="Institution (e.g., NED University)" required />
+              <input type="text" name="duration" placeholder="Duration (e.g., 2014-2018)" required />
+              <button type="button" class="remove-education" style="display: none;">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="add-education">Add Education</button>
+        </fieldset>
+
+        <!-- Work Experience -->
+        <fieldset>
+          <legend>Work Experience</legend>
+          <div id="work-container">
+            <div class="work-entry">
+              <input type="text" name="jobTitle" placeholder="Job Title (e.g., AI Engineer)" required />
+              <input type="text" name="company" placeholder="Company (e.g., PanaCloud Pakistan)" required />
+              <input type="text" name="workDuration" placeholder="Duration (e.g., 2020-2023)" required />
+              <textarea name="responsibilities" placeholder="Responsibilities" required></textarea>
+              <button type="button" class="remove-work" style="display: none;">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="add-work">Add Work Experience</button>
+        </fieldset>
+
+        <!-- Skills -->
+        <fieldset>
+          <legend>Skills</legend>
+          <div id="skills-container">
+            <input type="text" name="skill" placeholder="Skill (e.g., HTML)" required />
+          </div>
+          <button type="button" id="add-skill">Add Skill</button>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+      </form>
+    </div>
+
+    <!-- Resume Display Section -->
+    <div id="resume-section">
+      <div id="resume">
+        <div id="personal-info" class="editable-section">
+          <h2>Personal Information</h2>
+          <p><b>Name:</b> <span id="resume-name" class="editable">Owais Khan</span></p>
+          <p><b>Email:</b> <span id="resume-email" class="editable">owais@gmail.com</span></p>
+          <p><b>Phone:</b> <span id="resume-phone" class="editable">0300-1234567</span></p>
+          <img id="resume-profile-pic" src="profile.jpg" alt="Profile Picture" width="100" />
+        </div>
+
+        <div id="education" class="editable-section">
+          <h2>Education</h2>
+          <ul id="resume-education">
+            <li data-index="0" class="editable">Bachelor in Computer Science, NED University (2014-2018)</li>
+            <li data-index="1" class="editable">Master in Gen AI, NED University (2024-2026)</li>
+          </ul>
+        </div>
+
+        <div id="skills" class="editable-section">
+          <h2>Skills</h2>
+          <ul id="resume-skills">
+            <li data-index="0" class="editable">HTML</li>
+            <li data-index="1" class="editable">CSS</li>
+            <li data-index="2" class="editable">TypeScript</li>
+            <li data-index="3" class="editable">JavaScript</li>
+            <li data-index="4" class="editable">NodeJS</li>
+            <li data-index="5" class="editable">ReactJS</li>
+            <li data-index="6" class="editable">NextJS</li>
+            <li data-index="7" class="editable">Tailwind CSS</li>
+          </ul>
+        </div>
+
+        <div id="work-experience" class="editable-section">
+          <h2>Work Experience</h2>
+          <div id="resume-work">
+            <div class="work-entry" data-index="0">
+              <p class="editable" data-section="jobTitle">AI Engineer</p> at PanaCloud Pakistan (2020-2023)
+              <p><b>Responsibilities:</b></p>
+              <ul>
+                <li data-resp-index="0" class="editable">Developed web applications using JavaScript and TypeScript</li>
+                <li data-resp-index="1" class="editable">Collaborated with a team of developers on Agile projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include the JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>

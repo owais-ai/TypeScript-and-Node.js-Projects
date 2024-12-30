@@ -1,0 +1,199 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Form Section */
+#form-section {
+  flex: 1 1 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#form-section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+form fieldset {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+form legend {
+  padding: 0 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.required {
+  color: red;
+}
+
+/* Remove buttons */
+.remove-education,
+.remove-work {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.remove-education:hover,
+.remove-work:hover {
+  background-color: #c82333;
+}
+
+/* Resume Section */
+#resume-section {
+  flex: 1 1 400px;
+}
+
+#resume {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#resume > div {
+  margin-bottom: 20px;
+}
+
+/* Section headings */
+h2 {
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Bold labels within text */
+b {
+  color: #555;
+}
+
+/* List items in Skills and Responsibilities */
+ul {
+  margin-left: 20px;
+}
+
+/* Profile picture styling */
+#personal-info img {
+  display: block;
+  margin-top: 10px;
+  border-radius: 2%;
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Editable sections */
+.editable-section {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editable-section:hover {
+  background-color: #f0f8ff;
+}
+
+.editable-section:focus-within {
+  background-color: #e6f7ff;
+}
+
+/* Editable fields */
+.editable {
+  border-bottom: 1px dashed #007bff;
+}
+
+.editable:hover {
+  background-color: #eef7ff;
+}
+
+.editable:focus-within {
+  background-color: #d9eefc;
+}
+
+/* Input fields during editing */
+.editable input {
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #form-section,
+  #resume-section {
+    flex: 1 1 100%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
